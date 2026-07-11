@@ -1,0 +1,1 @@
+import"./chunk-IM5V7DCU.js";var t=[{path:"audit-checklist",loadComponent:()=>import("./chunk-Z7EZQKJS.js").then(o=>o.AuditChecklistComponent)},{path:"compliance-documents",loadComponent:()=>import("./chunk-WGN4NQQF.js").then(o=>o.ComplianceDocumentsComponent)}];export{t as QUALITY_COMPLIANCE_ROUTE};

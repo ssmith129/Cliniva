@@ -1,0 +1,1 @@
+import"./chunk-IM5V7DCU.js";var o=[{path:"",redirectTo:"chart-widget",pathMatch:"full"},{path:"chart-widget",loadComponent:()=>import("./chunk-52IN4LNQ.js").then(t=>t.ChartWidgetComponent)},{path:"data-widget",loadComponent:()=>import("./chunk-6B5P2YBK.js").then(t=>t.DataWidgetComponent)}];export{o as WIDGET_ROUTE};

@@ -1,0 +1,1 @@
+import"./chunk-IM5V7DCU.js";var n=[{path:"inbox",loadComponent:()=>import("./chunk-64S4EDFQ.js").then(o=>o.InboxComponent)},{path:"compose",loadComponent:()=>import("./chunk-XHBL5HVT.js").then(o=>o.ComposeComponent)},{path:"read-mail",loadComponent:()=>import("./chunk-SI7Q334A.js").then(o=>o.ReadMailComponent)}];export{n as EMAIL_ROUTE};

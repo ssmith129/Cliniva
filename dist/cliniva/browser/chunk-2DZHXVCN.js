@@ -1,0 +1,1 @@
+import"./chunk-IM5V7DCU.js";var n=[{path:"session-scheduling",loadComponent:()=>import("./chunk-OFNH3KI5.js").then(o=>o.SessionSchedulingComponent)},{path:"progress-notes",loadComponent:()=>import("./chunk-ISJTAWGG.js").then(o=>o.ProgressNotesComponent)}];export{n as PHYSIOTHERAPY_ROUTE};

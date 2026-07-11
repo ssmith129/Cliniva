@@ -1,0 +1,1 @@
+import"./chunk-IM5V7DCU.js";var t=[{path:"visitor-registration",loadComponent:()=>import("./chunk-BEKXXZ4Y.js").then(o=>o.VisitorRegistrationComponent)},{path:"visit-logs",loadComponent:()=>import("./chunk-ACRBY3QK.js").then(o=>o.VisitLogsComponent)}];export{t as VISITOR_MANAGEMENT_ROUTE};
