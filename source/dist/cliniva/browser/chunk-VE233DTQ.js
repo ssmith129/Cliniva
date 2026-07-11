@@ -1,1 +1,0 @@
-import"./chunk-IM5V7DCU.js";var t=[{path:"waste-tracking",loadComponent:()=>import("./chunk-ZBFVXN34.js").then(o=>o.WasteTrackingComponent)},{path:"disposal-logs",loadComponent:()=>import("./chunk-UWKQJG3O.js").then(o=>o.DisposalLogsComponent)}];export{t as WASTE_MANAGEMENT_ROUTE};

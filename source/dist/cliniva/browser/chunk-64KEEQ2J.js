@@ -1,1 +1,0 @@
-import"./chunk-IM5V7DCU.js";var t=[{path:"",loadComponent:()=>import("./chunk-JZK6J4PQ.js").then(o=>o.ContactsComponent)},{path:"**",loadComponent:()=>import("./chunk-7FOHRX4H.js").then(o=>o.Page404Component)}];export{t as CONTACT_ROUTE};

@@ -1,1 +1,0 @@
-import"./chunk-IM5V7DCU.js";var t=[{path:"patient-feedback",loadComponent:()=>import("./chunk-CMOFT7SX.js").then(o=>o.PatientFeedbackComponent)},{path:"complaint-resolution",loadComponent:()=>import("./chunk-M3V6LTGU.js").then(o=>o.ComplaintResolutionComponent)}];export{t as FEEDBACK_ROUTE};
