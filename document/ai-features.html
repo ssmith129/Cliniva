@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Cliniva - AI Features Documentation </title>
+    <!-- Favicon-->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Plugins Core Css -->
+    <link href="assets/css/app.min.css" rel="stylesheet">
+
+    <!-- Custom Css -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/modern-sidebar.css" rel="stylesheet" />
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+
+    <link href="assets/css/prism.min.css" rel="stylesheet" />
+
+    <!-- You can choose a theme from css/styles instead of get all themes -->
+    <link href="assets/css/styles/theme-white.css" rel="stylesheet" />
+</head>
+
+<body class="theme-white logo-black submenu-closed">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30">
+                <img class="loading-img-spin" src="assets/images/loading.png" width="20" height="20" alt="admin">
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" /> <span
+                        class="logo-name">Cliniva</span></a>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li>
+                        <a href="index.html">
+                            <i class="material-icons">home</i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="ai-features.html">
+                            <i class="material-icons">smart_toy</i>
+                            <span>AI Features</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="glassmorphism.html">
+                            <i class="material-icons">blur_on</i>
+                            <span>Glassmorphism</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="intro.html">
+                            <i class="material-icons">info</i>
+                            <span>Introductions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="install.html">
+                            <i class="material-icons">build</i>
+                            <span>Installation</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="folder-structure.html">
+                            <i class="material-icons">folder</i>
+                            <span>Folder Structure</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="config.html">
+                            <i class="material-icons">perm_data_setting</i>
+                            <span>Configuration</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="multi-lang.html">
+                            <i class="material-icons">translate</i>
+                            <span>Multi Language</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="routing.html">
+                            <i class="material-icons">directions</i>
+                            <span>Routing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="new-page.html">
+                            <i class="material-icons">select_all</i>
+                            <span>New Page </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="material-icons">people</i>
+                            <span>Role</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="role-info.html">About Role</a>
+                            </li>
+                            <li>
+                                <a href="role-config.html">Role Configurations</a>
+                            </li>
+                            <li>
+                                <a href="new-role.html">Add New Role</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="sidebar-menu.html">
+                            <i class="material-icons">chrome_reader_mode</i>
+                            <span>Sidebar Menu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="hospital-modules.html">
+                            <i class="material-icons">local_hospital</i>
+                            <span>Hospital Modules</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="material-icons">web</i>
+                            <span>Form</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="form-elements.html">Form Elements</a>
+                            </li>
+                            <li>
+                                <a href="form-validation.html">Form Validation</a>
+                            </li>
+                            <li>
+                                <a href="form-wizard.html">Form Wizard</a>
+                            </li>
+                            <li>
+                                <a href="editors.html">Editors</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="material-icons">border_all</i>
+                            <span>Tables</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="bootstrap-table.html">Bootstrap Table</a>
+                            </li>
+                            <li>
+                                <a href="material-table.html">Material Table</a>
+                            </li>
+                            <li>
+                                <a href="ngx-datatable.html">ngx-datatable</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="material-icons">equalizer</i>
+                            <span>Charts</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="echart.html">Echart Chart</a>
+                            </li>
+
+                            <li>
+                                <a href="apex.html">Apex Chart</a>
+                            </li>
+                            <li>
+                                <a href="chartjs.html">Chart js</a>
+                            </li>
+                            <li>
+                                <a href="gauge-chart.html">Gauge Chart</a>
+                            </li>
+                            <li>
+                                <a href="ngx-chart.html">ngx-chart</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="calendar.html">
+                            <i class="material-icons">event</i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pwa-deployment.html">
+                            <i class="material-icons">cloud_upload</i>
+                            <span>PWA & Deployment</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="utilities.html">
+                            <i class="material-icons">format_paint</i>
+                            <span>Utilities</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="credits.html">
+                            <i class="material-icons">thumb_up</i>
+                            <span>Credits</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="changelog.html">
+                            <i class="material-icons">watch_later</i>
+                            <span>Changelog</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="support.html">
+                            <i class="material-icons">local_phone</i>
+                            <span>Support</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- #Menu -->
+        </aside>
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="card border-0 shadow-sm" style="border-radius: 16px;">
+                        <div class="header"
+                            style="border-bottom: 1px solid #f0f0f0; padding: 20px 25px; background: linear-gradient(135deg, #eef2f9 0%, #ffffff 100%); border-top-left-radius: 16px; border-top-right-radius: 16px;">
+                            <h2
+                                style="font-weight: 600; color: #2a3547; margin: 0; display: flex; align-items: center;">
+                                <i class="material-icons"
+                                    style="font-size: 28px; margin-right: 12px; color: #5d87ff;">auto_awesome</i>
+                                AI Features & Integration Hub
+                            </h2>
+                        </div>
+                        <div class="body" style="padding: 30px;">
+                            <p class="text-muted" style="font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
+                                This document lists all interactive AI features integrated into Cliniva. Each feature
+                                uses a unified AI engine that connects to OpenAI or Gemini models when an API key is
+                                configured, and falls back to Demo Mode (mock responses) when no key is set.
+                            </p>
+
+                            <!-- Config Section -->
+                            <div class="p-4 mb-5"
+                                style="background: #f8f9fa; border-left: 4px solid #5d87ff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                                <h4 style="font-weight: 600; color: #2a3547; margin-top: 0;"><i class="material-icons"
+                                        style="vertical-align: middle; color: #5d87ff; margin-right: 8px;">settings</i>
+                                    AI Configuration Settings</h4>
+                                <p class="text-muted mb-3">Before using live AI models, configure your API key:</p>
+                                <p class="mb-3 text-muted" style="font-size: 14px;">
+                                    <i class="material-icons text-primary"
+                                        style="font-size: 16px; vertical-align: middle;">location_on</i>
+                                    <strong style="color: #2a3547;">Location:</strong> Admin &rarr; Settings &rarr; AI
+                                    Settings
+                                    <span
+                                        style="background: #eef2f9; color: #5d87ff; padding: 4px 8px; border-radius: 4px; margin-left: 8px; font-family: monospace; font-size: 13px; font-weight: 600; border: 1px solid rgba(93, 135, 255, 0.2);">/admin/settings/ai-settings</span>
+                                </p>
+                                <p class="font-weight-bold mb-2" style="color: #2a3547;">How to Configure:</p>
+                                <ol class="text-muted mb-0" style="line-height: 1.8;">
+                                    <li>Navigate to the page from the sidebar (Admin section).</li>
+                                    <li>Select your AI Provider (Google Gemini or OpenAI).</li>
+                                    <li>Choose the Model (e.g., <code>gpt-4o</code>, <code>gemini-1.5-flash</code>).
+                                    </li>
+                                    <li>Enter your API Key and click <strong>Save Configuration</strong>.</li>
+                                    <li>Click <strong>Test Connection</strong> to verify.</li>
+                                </ol>
+                            </div>
+
+                            <!-- AI Categories -->
+                            <div class="row mb-4">
+                                <!-- Global Features -->
+                                <div class="col-12 mb-4">
+                                    <h4
+                                        style="font-weight: 600; color: #2a3547; border-bottom: 2px solid #e0e6ed; padding-bottom: 10px;">
+                                        <i class="material-icons"
+                                            style="vertical-align: middle; color: #13deb9; margin-right: 8px;">public</i>
+                                        Global AI Features
+                                    </h4>
+                                </div>
+
+                                <!-- Card 1 -->
+                                <div class="col-md-6 col-lg-6 mb-4">
+                                    <div class="card border shadow-none"
+                                        style="border-radius: 12px;top:0px; background: #fff;">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5
+                                                    style="font-weight: 600; color: #2a3547; margin: 0; font-size: 16px;">
+                                                    1. AI Chat Assistant</h5>
+                                                <span class="badge"
+                                                    style="background: #eef2f9 !important; color: #5d87ff !important; border: 1px solid rgba(93,135,255,0.3) !important; font-weight: 600 !important; font-size: 12px !important;"
+                                                    style="border-radius: 30px;">Floating Widget</span>
+                                            </div>
+                                            <p class="text-muted mb-3" style="font-size: 13px;"><i
+                                                    class="material-icons text-muted mr-1"
+                                                    style="vertical-align: middle; margin-bottom:0px;">location_on</i>
+                                                Every page (bottom-right corner)</p>
+                                            <p style="color: #5a6a85; font-size: 14px;">A persistent, draggable chat
+                                                bubble (like Intercom/Drift) that lets users ask any clinic-related
+                                                question.</p>
+
+                                            <div class="mt-4 pt-3" style="border-top: 1px dashed #e0e6ed;">
+                                                <h6
+                                                    style="font-weight: 600; color: #2a3547; margin-bottom: 10px; font-size: 14px;">
+                                                    How to Use:</h6>
+                                                <ul class="text-muted pl-3 mb-0"
+                                                    style="line-height: 1.6; font-size: 14px;">
+                                                    <li>Click the floating chat bubble icon.</li>
+                                                    <li>Type a question or select a quick-action button.</li>
+                                                    <li>The AI responds in real-time with contextual answers.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 2 -->
+                                <div class="col-md-6 col-lg-6 mb-4">
+                                    <div class="card border shadow-none"
+                                        style="border-radius: 12px; top:0px; background: #fff;">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5
+                                                    style="font-weight: 600; color: #2a3547; margin: 0; font-size: 16px;">
+                                                    2. AI Smart Insights</h5>
+                                                <span class="badge"
+                                                    style="background: #eef2f9 !important; color: #13deb9 !important; border: 1px solid rgba(19,222,185,0.3) !important; font-weight: 600 !important; font-size: 12px !important;"
+                                                    style="border-radius: 30px;">Dashboard Card</span>
+                                            </div>
+                                            <p class="text-muted mb-3" style="font-size: 13px;"><i
+                                                    class="material-icons text-muted mr-1"
+                                                    style="margin-bottom:0px; vertical-align: middle;">location_on</i>
+                                                Admin Dashboard (<code>/admin/dashboard/main</code>)</p>
+                                            <p style="color: #5a6a85; font-size: 14px;">Displays 3 AI-generated
+                                                predictive insights based on current hospital metrics (patient count,
+                                                bed occupancy, emergency cases).</p>
+
+                                            <div class="mt-4 pt-3" style="border-top: 1px dashed #e0e6ed;">
+                                                <h6
+                                                    style="font-weight: 600; color: #2a3547; margin-bottom: 10px; font-size: 14px;">
+                                                    How to Use:</h6>
+                                                <ul class="text-muted pl-3 mb-0"
+                                                    style="line-height: 1.6; font-size: 14px;">
+                                                    <li>Open the Admin Dashboard.</li>
+                                                    <li>Find the <strong>AI Smart Insights</strong> card.</li>
+                                                    <li>Insights auto-load and animate in with a staggered reveal.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Admin Features Row -->
+                            <div class="row mb-4">
+                                <!-- Admin Features -->
+                                <div class="col-12 mt-4 mb-4">
+                                    <h4
+                                        style="font-weight: 600; color: #2a3547; border-bottom: 2px solid #e0e6ed; padding-bottom: 10px;">
+                                        <i class="material-icons"
+                                            style="vertical-align: middle; color: #ffae1f; margin-right: 8px;">admin_panel_settings</i>
+                                        Admin Features
+                                    </h4>
+                                </div>
+
+                                <!-- Feature 3 -->
+                                <div class="col-md-6 col-lg-6 mb-4">
+                                    <div class="card border shadow-none" style="border-radius: 12px; top:0px;">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5
+                                                    style="font-weight: 600; color: #2a3547; margin: 0; font-size: 16px;">
+                                                    3. AI Triage Advisory</h5>
+                                                <span class="badge"
+                                                    style="background: #fff6e5 !important; color: #ffae1f !important; border: 1px solid rgba(255,174,31,0.3) !important; font-weight: 600 !important; font-size: 12px !important;"
+                                                    style="border-radius: 30px;">In-page button</span>
+                                            </div>
+                                            <p class="text-muted mb-3" style="font-size: 13px;"><i
+                                                    class="material-icons text-muted mr-1"
+                                                    style="margin-bottom:0px; vertical-align: middle;">location_on</i>
+                                                Admin &rarr; Emergency &rarr; Patient Triage Form</p>
+                                            <p style="color: #5a6a85; font-size: 14px;">Analyzes vitals, chief
+                                                complaint, and symptoms to determine the Emergency Severity Index (ESI)
+                                                Level (1-5).</p>
+                                            <div class="mt-4 pt-3" style="border-top: 1px dashed #e0e6ed;">
+                                                <h6 style="font-weight: 600; color: #2a3547; font-size: 14px;">How to
+                                                    Use:</h6>
+                                                <ol class="text-muted pl-3 mb-0"
+                                                    style="line-height: 1.6; font-size: 14px;">
+                                                    <li>Fill in patient vitals and complaint details.</li>
+                                                    <li>Click <strong>AI Triage Analysis</strong>.</li>
+                                                    <li>The AI returns: ESI level with justification, primary risks,
+                                                        recommended diagnostics, and immediate precautions.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 4 -->
+                                <div class="col-md-6 col-lg-6 mb-4">
+                                    <div class="card border shadow-none" style="border-radius: 12px; top:0px;">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5
+                                                    style="font-weight: 600; color: #2a3547; margin: 0; font-size: 16px;">
+                                                    4. AI ICU Resource Forecaster</h5>
+                                                <span class="badge"
+                                                    style="background: #fdede8 !important; color: #fa896b !important; border: 1px solid rgba(250,137,107,0.3) !important; font-weight: 600 !important; font-size: 12px !important;"
+                                                    style="border-radius: 30px;">In-page button</span>
+                                            </div>
+                                            <p class="text-muted mb-3" style="font-size: 13px;"><i
+                                                    class="material-icons text-muted mr-1"
+                                                    style="margin-bottom:0px; vertical-align: middle;">location_on</i>
+                                                Admin &rarr; ICU Dashboard</p>
+                                            <p style="color: #5a6a85; font-size: 14px;">Predicts ICU inflow risk,
+                                                recommended staffing ratios, capacity alerts, and peak admission hours.
+                                            </p>
+                                            <div class="mt-4 pt-3" style="border-top: 1px dashed #e0e6ed;">
+                                                <h6 style="font-weight: 600; color: #2a3547; font-size: 14px;">How to
+                                                    Use:</h6>
+                                                <ol class="text-muted pl-3 mb-0"
+                                                    style="line-height: 1.6; font-size: 14px;">
+                                                    <li>Open the ICU Dashboard.</li>
+                                                    <li>Click <strong>AI Resource Forecast</strong>.</li>
+                                                    <li>Review the predictive analysis card with risk level, staffing
+                                                        recommendations, and actionable insights.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 5 -->
+                                <div class="col-md-6 col-lg-6 mb-4">
+                                    <div class="card border shadow-none" style="border-radius: 12px; top:0px;">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5
+                                                    style="font-weight: 600; color: #2a3547; margin: 0; font-size: 16px;">
+                                                    5. AI Diet Plan Generator</h5>
+                                                <span class="badge"
+                                                    style="background: #e6f9f5 !important; color: #13deb9 !important; border: 1px solid rgba(19,222,185,0.3) !important; font-weight: 600 !important; font-size: 12px !important;"
+                                                    style="border-radius: 30px;">In-page button</span>
+                                            </div>
+                                            <p class="text-muted mb-3" style="font-size: 13px;"><i
+                                                    class="material-icons text-muted mr-1"
+                                                    style="margin-bottom:0px; vertical-align: middle;">location_on</i>
+                                                Admin &rarr; Diet & Nutrition &rarr; Assessment</p>
+                                            <p style="color: #5a6a85; font-size: 14px;">Generates a detailed 7-day
+                                                clinical diet meal plan based on patient parameters and conditions.</p>
+                                            <div class="mt-4 pt-3" style="border-top: 1px dashed #e0e6ed;">
+                                                <h6 style="font-weight: 600; color: #2a3547; font-size: 14px;">How to
+                                                    Use:</h6>
+                                                <ol class="text-muted pl-3 mb-0"
+                                                    style="line-height: 1.6; font-size: 14px;">
+                                                    <li>Enter patient details (age, weight, height, target calories,
+                                                        conditions).</li>
+                                                    <li>Click <strong>Generate Diet Plan</strong>.</li>
+                                                    <li>AI returns a structured 7-day plan with daily meals and snacks.
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 6 -->
+                                <div class="col-md-6 col-lg-6 mb-4">
+                                    <div class="card border shadow-none" style="border-radius: 12px; top:0px;">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5
+                                                    style="font-weight: 600; color: #2a3547; margin: 0; font-size: 16px;">
+                                                    6. AI Clinical Notes Scribe</h5>
+                                                <span class="badge"
+                                                    style="background: #eef2f9 !important; color: #5d87ff !important; border: 1px solid rgba(93,135,255,0.3) !important; font-weight: 600 !important; font-size: 12px !important;"
+                                                    style="border-radius: 30px;">Dialog button</span>
+                                            </div>
+                                            <p class="text-muted mb-3" style="font-size: 13px;"><i
+                                                    class="material-icons text-muted mr-1"
+                                                    style="margin-bottom:0px; vertical-align: middle;">location_on</i>
+                                                Admin &rarr; EMR &rarr; Clinical Notes</p>
+                                            <p style="color: #5a6a85; font-size: 14px;">Transforms raw doctor
+                                                observations into a professionally structured clinical note.</p>
+                                            <div class="mt-4 pt-3" style="border-top: 1px dashed #e0e6ed;">
+                                                <h6 style="font-weight: 600; color: #2a3547; font-size: 14px;">How to
+                                                    Use:</h6>
+                                                <ol class="text-muted pl-3 mb-0"
+                                                    style="line-height: 1.6; font-size: 14px;">
+                                                    <li>Open the Add/Edit Clinical Notes dialog.</li>
+                                                    <li>Enter raw observations in the description field.</li>
+                                                    <li>Click <strong>AI Auto-Write</strong>.</li>
+                                                    <li>The AI structures the note into Symptoms, Diagnosis, and Plan.
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 7 -->
+                                <div class="col-md-6 col-lg-6 mb-4">
+                                    <div class="card border shadow-none" style="border-radius: 12px; top:0px;">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5
+                                                    style="font-weight: 600; color: #2a3547; margin: 0; font-size: 16px;">
+                                                    7. AI Discharge Summary Writer</h5>
+                                                <span class="badge"
+                                                    style="background: #eef2f9 !important; color: #5d87ff !important; border: 1px solid rgba(93,135,255,0.3) !important; font-weight: 600 !important; font-size: 12px !important;"
+                                                    style="border-radius: 30px;">Dialog button</span>
+                                            </div>
+                                            <p class="text-muted mb-3" style="font-size: 13px;"><i
+                                                    class="material-icons text-muted mr-1"
+                                                    style="margin-bottom:0px; vertical-align: middle;">location_on</i>
+                                                Admin &rarr; Discharge &rarr; Summary Creation</p>
+                                            <p style="color: #5a6a85; font-size: 14px;">Auto-generates a complete
+                                                discharge summary from the primary diagnosis.</p>
+                                            <div class="mt-4 pt-3" style="border-top: 1px dashed #e0e6ed;">
+                                                <h6 style="font-weight: 600; color: #2a3547; font-size: 14px;">How to
+                                                    Use:</h6>
+                                                <ol class="text-muted pl-3 mb-0"
+                                                    style="line-height: 1.6; font-size: 14px;">
+                                                    <li>Click <strong>Add Summary</strong> or edit an existing one.</li>
+                                                    <li>Enter the <strong>Primary Diagnosis</strong>.</li>
+                                                    <li>Click <strong>AI Auto-Write</strong>.</li>
+                                                    <li>The AI drafts the full medical summary and instructions.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Doctor Features Row -->
+                            <div class="row mb-4">
+                                <!-- Doctor Features -->
+                                <div class="col-12 mt-4 mb-4">
+                                    <h4
+                                        style="font-weight: 600; color: #2a3547; border-bottom: 2px solid #e0e6ed; padding-bottom: 10px;">
+                                        <i class="material-icons"
+                                            style="vertical-align: middle; color: #fa896b; margin-right: 8px;">health_and_safety</i>
+                                        Doctor Features
+                                    </h4>
+                                </div>
+
+                                <!-- Feature 8 -->
+                                <div class="col-md-6 col-lg-6 mb-4">
+                                    <div class="card border shadow-none" style="border-radius: 12px; top:0px;">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5
+                                                    style="font-weight: 600; color: #2a3547; margin: 0; font-size: 16px;">
+                                                    8. AI Patient Health Summary</h5>
+                                                <span class="badge"
+                                                    style="background: #eef2f9 !important; color: #5d87ff !important; border: 1px solid rgba(93,135,255,0.3) !important; font-weight: 600 !important; font-size: 12px !important;"
+                                                    style="border-radius: 30px;">Dialog button</span>
+                                            </div>
+                                            <p class="text-muted mb-3" style="font-size: 13px;"><i
+                                                    class="material-icons text-muted mr-1"
+                                                    style="margin-bottom:0px; vertical-align: middle;">location_on</i>
+                                                Doctor &rarr; Patients &rarr; Patient Records</p>
+                                            <p style="color: #5a6a85; font-size: 14px;">Parses patient diagnostic
+                                                history and generates a structured clinical summary with a chronological
+                                                timeline.</p>
+                                            <div class="mt-4 pt-3" style="border-top: 1px dashed #e0e6ed;">
+                                                <h6 style="font-weight: 600; color: #2a3547; font-size: 14px;">How to
+                                                    Use:</h6>
+                                                <ol class="text-muted pl-3 mb-0"
+                                                    style="line-height: 1.6; font-size: 14px;">
+                                                    <li>Open a patient record's edit dialog.</li>
+                                                    <li>View the <strong>AI Clinical Summary</strong> panel.</li>
+                                                    <li>Click <strong>Generate AI Summary</strong>.</li>
+                                                    <li>The AI displays a structured summary with timeline.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 9 -->
+                                <div class="col-md-6 col-lg-6 mb-4">
+                                    <div class="card border shadow-none" style="border-radius: 12px; top:0px;">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5
+                                                    style="font-weight: 600; color: #2a3547; margin: 0; font-size: 16px;">
+                                                    9. AI Prescription Scribe & Safety</h5>
+                                                <span class="badge"
+                                                    style="background: #fdede8 !important; color: #fa896b !important; border: 1px solid rgba(250,137,107,0.3) !important; font-weight: 600 !important; font-size: 12px !important;"
+                                                    style="border-radius: 30px;">Dialog buttons</span>
+                                            </div>
+                                            <p class="text-muted mb-3" style="font-size: 13px;"><i
+                                                    class="material-icons text-muted mr-1"
+                                                    style="margin-bottom:0px; vertical-align: middle;">location_on</i>
+                                                Doctor &rarr; Prescriptions</p>
+                                            <p style="color: #5a6a85; font-size: 14px;">Auto-fills dosage from raw notes
+                                                and analyzes for drug interactions, warnings, and contraindications.</p>
+                                            <div class="mt-4 pt-3" style="border-top: 1px dashed #e0e6ed;">
+                                                <h6 style="font-weight: 600; color: #2a3547; font-size: 14px;">How to
+                                                    Use:</h6>
+                                                <ol class="text-muted pl-3 mb-0"
+                                                    style="line-height: 1.6; font-size: 14px;">
+                                                    <li>Click <strong>Add Prescription</strong>.</li>
+                                                    <li><strong>AI Scribe:</strong> Enter raw medication notes &rarr;
+                                                        click <strong>AI Scribe</strong>.</li>
+                                                    <li><strong>Drug Safety Check:</strong> Enter details &rarr; click
+                                                        <strong>AI Safety Check</strong>.
+                                                    </li>
+                                                    <li>Review the color-coded alert panel.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Patient Features Row -->
+                            <div class="row mb-4">
+                                <!-- Patient Features -->
+                                <div class="col-12 mt-4 mb-4">
+                                    <h4
+                                        style="font-weight: 600; color: #2a3547; border-bottom: 2px solid #e0e6ed; padding-bottom: 10px;">
+                                        <i class="material-icons"
+                                            style="vertical-align: middle; color: #ff5c8e; margin-right: 8px;">personal_injury</i>
+                                        Patient Features
+                                    </h4>
+                                </div>
+
+                                <!-- Feature 10 -->
+                                <div class="col-md-6 col-lg-6 mb-4">
+                                    <div class="card border shadow-none" style="border-radius: 12px; top:0px;">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5
+                                                    style="font-weight: 600; color: #2a3547; margin: 0; font-size: 16px;">
+                                                    10. AI Vitals Anomaly Detector</h5>
+                                                <span class="badge"
+                                                    style="background: #fdede8 !important; color: #fa896b !important; border: 1px solid rgba(250,137,107,0.3) !important; font-weight: 600 !important; font-size: 12px !important;"
+                                                    style="border-radius: 30px;">In-page button</span>
+                                            </div>
+                                            <p class="text-muted mb-3" style="font-size: 13px;"><i
+                                                    class="material-icons text-muted mr-1"
+                                                    style="margin-bottom:0px; vertical-align: middle;">location_on</i>
+                                                Patient &rarr; Health Monitoring</p>
+                                            <p style="color: #5a6a85; font-size: 14px;">Scans all logged vital signs
+                                                (BP, HR, glucose, SpO2) for critical anomalies and trends.</p>
+                                            <div class="mt-4 pt-3" style="border-top: 1px dashed #e0e6ed;">
+                                                <h6 style="font-weight: 600; color: #2a3547; font-size: 14px;">How to
+                                                    Use:</h6>
+                                                <ol class="text-muted pl-3 mb-0"
+                                                    style="line-height: 1.6; font-size: 14px;">
+                                                    <li>Open the Health Monitoring page.</li>
+                                                    <li>Click <strong>Run AI Vitals Analysis</strong>.</li>
+                                                    <li>The AI displays an alert card with overall status and wellness
+                                                        recommendations.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 11 -->
+                                <div class="col-md-6 col-lg-6 mb-4">
+                                    <div class="card border shadow-none" style="border-radius: 12px; top:0px;">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5
+                                                    style="font-weight: 600; color: #2a3547; margin: 0; font-size: 16px;">
+                                                    11. AI Lab Report Interpreter</h5>
+                                                <span class="badge"
+                                                    style="background: #eef2f9 !important; color: #13deb9 !important; border: 1px solid rgba(19,222,185,0.3) !important; font-weight: 600 !important; font-size: 12px !important;"
+                                                    style="border-radius: 30px;">Dialog button</span>
+                                            </div>
+                                            <p class="text-muted mb-3" style="font-size: 13px;"><i
+                                                    class="material-icons text-muted mr-1"
+                                                    style="margin-bottom:0px; vertical-align: middle;">location_on</i>
+                                                Patient &rarr; Lab Reports</p>
+                                            <p style="color: #5a6a85; font-size: 14px;">Interprets lab result text,
+                                                parses biomarkers, flags High/Low/Normal status, and provides simple
+                                                explanations.</p>
+                                            <div class="mt-4 pt-3" style="border-top: 1px dashed #e0e6ed;">
+                                                <h6 style="font-weight: 600; color: #2a3547; font-size: 14px;">How to
+                                                    Use:</h6>
+                                                <ol class="text-muted pl-3 mb-0"
+                                                    style="line-height: 1.6; font-size: 14px;">
+                                                    <li>Open the Add/Edit Lab Report dialog.</li>
+                                                    <li>Enter test name and results summary.</li>
+                                                    <li>Click <strong>AI Interpret Report</strong>.</li>
+                                                    <li>The AI returns a per-metric breakdown with badges.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 12 -->
+                                <div class="col-md-6 col-lg-6 mb-4">
+                                    <div class="card border shadow-none" style="border-radius: 12px; top:0px;">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5
+                                                    style="font-weight: 600; color: #2a3547; margin: 0; font-size: 16px;">
+                                                    12. AI Doctor-Speak Explainer</h5>
+                                                <span class="badge"
+                                                    style="background: #e6f9f5 !important; color: #13deb9 !important; border: 1px solid rgba(19,222,185,0.3) !important; font-weight: 600 !important; font-size: 12px !important;"
+                                                    style="border-radius: 30px;">In-page button</span>
+                                            </div>
+                                            <p class="text-muted mb-3" style="font-size: 13px;"><i
+                                                    class="material-icons text-muted mr-1"
+                                                    style="margin-bottom:0px; vertical-align: middle;">location_on</i>
+                                                Patient &rarr; Documents</p>
+                                            <p style="color: #5a6a85; font-size: 14px;">Translates complex medical
+                                                jargon from clinical notes into plain English.</p>
+                                            <div class="mt-4 pt-3" style="border-top: 1px dashed #e0e6ed;">
+                                                <h6 style="font-weight: 600; color: #2a3547; font-size: 14px;">How to
+                                                    Use:</h6>
+                                                <ol class="text-muted pl-3 mb-0"
+                                                    style="line-height: 1.6; font-size: 14px;">
+                                                    <li>Open a document from the list.</li>
+                                                    <li>Scroll to the <strong>AI Doctor-Speak Explainer</strong>
+                                                        section.</li>
+                                                    <li>Click <strong>Translate Medical Terms</strong>.</li>
+                                                    <li>The AI identifies terms and provides a simple summary.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Feature 13 -->
+                                <div class="col-md-6 col-lg-6 mb-4">
+                                    <div class="card border shadow-none" style="border-radius: 12px; top:0px;">
+                                        <div class="card-body p-4">
+                                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                                <h5
+                                                    style="font-weight: 600; color: #2a3547; margin: 0; font-size: 16px;">
+                                                    13. AI Diet & Habits Planner</h5>
+                                                <span class="badge"
+                                                    style="background: #fff6e5 !important; color: #ffae1f !important; border: 1px solid rgba(255,174,31,0.3) !important; font-weight: 600 !important; font-size: 12px !important;"
+                                                    style="border-radius: 30px;">Dialog button</span>
+                                            </div>
+                                            <p class="text-muted mb-3" style="font-size: 13px;"><i
+                                                    class="material-icons text-muted mr-1"
+                                                    style="margin-bottom:0px; vertical-align: middle;">location_on</i>
+                                                Patient &rarr; Lifestyle</p>
+                                            <p style="color: #5a6a85; font-size: 14px;">Generates a personalized daily
+                                                nutrition plan with meal breakdown, habits checklist, and grocery list.
+                                            </p>
+                                            <div class="mt-4 pt-3" style="border-top: 1px dashed #e0e6ed;">
+                                                <h6 style="font-weight: 600; color: #2a3547; font-size: 14px;">How to
+                                                    Use:</h6>
+                                                <ol class="text-muted pl-3 mb-0"
+                                                    style="line-height: 1.6; font-size: 14px;">
+                                                    <li>Click the <strong>Diet Plans</strong> card on the Lifestyle
+                                                        page.</li>
+                                                    <li>Select <strong>Wellness Goal</strong> and <strong>Dietary
+                                                            Preference</strong>.</li>
+                                                    <li>Input target daily calories and click <strong>Generate
+                                                            Plan</strong>.</li>
+                                                    <li>The AI returns a full plan, saved to local storage.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="mt-5 mb-4 text-secondary" style="font-weight: 600;"><i class="material-icons"
+                                    style="vertical-align: middle; margin-right: 8px;">table_chart</i> Summary of All AI
+                                Features</h4>
+                            <div class="table-responsive mb-5"
+                                style="border-radius: 12px; overflow: hidden; border: 1px solid #e0e6ed;">
+                                <table class="table table-hover table-striped m-0" style="font-size: 14px;">
+                                    <thead style="background: #f8f9fa;">
+                                        <tr>
+                                            <th class="border-top-0 border-bottom-0 text-muted"
+                                                style="font-weight: 600;">#</th>
+                                            <th class="border-top-0 border-bottom-0 text-muted"
+                                                style="font-weight: 600;">Feature</th>
+                                            <th class="border-top-0 border-bottom-0 text-muted"
+                                                style="font-weight: 600;">Module</th>
+                                            <th class="border-top-0 border-bottom-0 text-muted"
+                                                style="font-weight: 600;">Page/Route</th>
+                                            <th class="border-top-0 border-bottom-0 text-muted"
+                                                style="font-weight: 600;">UI Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="color: #5a6a85;">
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="font-weight-bold" style="color: #2a3547;">AI Chat Assistant</td>
+                                            <td><span class="badge"
+                                                    style="background: #eef2f9 !important; color: #5d87ff !important; border: 1px solid rgba(93,135,255,0.3) !important; font-weight: 600 !important; font-size: 12px !important;">Global</span>
+                                            </td>
+                                            <td>Every page (bottom-right)</td>
+                                            <td>Floating widget</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td class="font-weight-bold" style="color: #2a3547;">AI Smart Insights</td>
+                                            <td><span class="badge"
+                                                    style="background: #fff6e5 !important; color: #ffae1f !important; border: 1px solid rgba(255,174,31,0.3) !important; font-weight: 600 !important; font-size: 12px !important;">Admin</span>
+                                            </td>
+                                            <td>Dashboard (<code>/admin/dashboard/main</code>)</td>
+                                            <td>Dashboard card</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td class="font-weight-bold" style="color: #2a3547;">AI Triage Advisory</td>
+                                            <td><span class="badge"
+                                                    style="background: #fff6e5 !important; color: #ffae1f !important; border: 1px solid rgba(255,174,31,0.3) !important; font-weight: 600 !important; font-size: 12px !important;">Admin</span>
+                                            </td>
+                                            <td>Emergency &rarr; Patient Triage Form</td>
+                                            <td>In-page button</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td class="font-weight-bold" style="color: #2a3547;">AI ICU Resource
+                                                Forecaster</td>
+                                            <td><span class="badge"
+                                                    style="background: #fff6e5 !important; color: #ffae1f !important; border: 1px solid rgba(255,174,31,0.3) !important; font-weight: 600 !important; font-size: 12px !important;">Admin</span>
+                                            </td>
+                                            <td>ICU Dashboard (<code>/admin/icu/dashboard</code>)</td>
+                                            <td>In-page button</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td class="font-weight-bold" style="color: #2a3547;">AI Diet Plan Generator
+                                            </td>
+                                            <td><span class="badge"
+                                                    style="background: #fff6e5 !important; color: #ffae1f !important; border: 1px solid rgba(255,174,31,0.3) !important; font-weight: 600 !important; font-size: 12px !important;">Admin</span>
+                                            </td>
+                                            <td>Diet & Nutrition &rarr; Assessment</td>
+                                            <td>In-page button</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td class="font-weight-bold" style="color: #2a3547;">AI Clinical Notes
+                                                Scribe</td>
+                                            <td><span class="badge"
+                                                    style="background: #fff6e5 !important; color: #ffae1f !important; border: 1px solid rgba(255,174,31,0.3) !important; font-weight: 600 !important; font-size: 12px !important;">Admin</span>
+                                            </td>
+                                            <td>EMR &rarr; Clinical Notes</td>
+                                            <td>Button in dialog</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="font-weight-bold" style="color: #2a3547;">AI Discharge Summary
+                                                Writer</td>
+                                            <td><span class="badge"
+                                                    style="background: #fff6e5 !important; color: #ffae1f !important; border: 1px solid rgba(255,174,31,0.3) !important; font-weight: 600 !important; font-size: 12px !important;">Admin</span>
+                                            </td>
+                                            <td>Discharge &rarr; Summary Creation</td>
+                                            <td>Button in dialog</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td class="font-weight-bold" style="color: #2a3547;">AI Patient Health
+                                                Summary</td>
+                                            <td><span class="badge"
+                                                    style="background: #e6f9f5 !important; color: #13deb9 !important; border: 1px solid rgba(19,222,185,0.3) !important; font-weight: 600 !important; font-size: 12px !important;">Doctor</span>
+                                            </td>
+                                            <td>Patient Records</td>
+                                            <td>Button in dialog</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td class="font-weight-bold" style="color: #2a3547;">AI Prescription Scribe
+                                                & Drug Safety</td>
+                                            <td><span class="badge"
+                                                    style="background: #e6f9f5 !important; color: #13deb9 !important; border: 1px solid rgba(19,222,185,0.3) !important; font-weight: 600 !important; font-size: 12px !important;">Doctor</span>
+                                            </td>
+                                            <td>Prescriptions</td>
+                                            <td>Buttons in dialog</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td class="font-weight-bold" style="color: #2a3547;">AI Vitals Anomaly
+                                                Detector</td>
+                                            <td><span class="badge"
+                                                    style="background: #fdede8 !important; color: #fa896b !important; border: 1px solid rgba(250,137,107,0.3) !important; font-weight: 600 !important; font-size: 12px !important;">Patient</span>
+                                            </td>
+                                            <td>Health Monitoring</td>
+                                            <td>In-page button</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td class="font-weight-bold" style="color: #2a3547;">AI Lab Report
+                                                Interpreter</td>
+                                            <td><span class="badge"
+                                                    style="background: #fdede8 !important; color: #fa896b !important; border: 1px solid rgba(250,137,107,0.3) !important; font-weight: 600 !important; font-size: 12px !important;">Patient</span>
+                                            </td>
+                                            <td>Lab Reports</td>
+                                            <td>Button in dialog</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td class="font-weight-bold" style="color: #2a3547;">AI Doctor-Speak
+                                                Explainer</td>
+                                            <td><span class="badge"
+                                                    style="background: #fdede8 !important; color: #fa896b !important; border: 1px solid rgba(250,137,107,0.3) !important; font-weight: 600 !important; font-size: 12px !important;">Patient</span>
+                                            </td>
+                                            <td>Documents</td>
+                                            <td>Button in dialog</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td class="font-weight-bold" style="color: #2a3547;">AI Diet & Habits
+                                                Planner</td>
+                                            <td><span class="badge"
+                                                    style="background: #fdede8 !important; color: #fa896b !important; border: 1px solid rgba(250,137,107,0.3) !important; font-weight: 600 !important; font-size: 12px !important;">Patient</span>
+                                            </td>
+                                            <td>Lifestyle</td>
+                                            <td>Dialog</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="d-flex p-4 mb-5"
+                                style="background: rgba(93, 135, 255, 0.05); border-radius: 12px; border: 1px solid rgba(93, 135, 255, 0.2);">
+                                <i class="material-icons text-primary mr-3" style="font-size: 32px;">lightbulb</i>
+                                <div>
+                                    <h5 class="text-primary mt-0 mb-2" style="font-weight: 600;">Developer Tip</h5>
+                                    <p class="m-0" style="color: #5a6a85; line-height: 1.6; font-size: 14px;">You can
+                                        easily extend these features or build new ones by using the
+                                        <code>postPrompt()</code> method inside the <code>AiService</code>. Just inject
+                                        the service into any component and start building intelligent workflows!
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100 shadow-none"
+                                        style="background: #fcfdfe; border: 1px solid #e0e6ed; border-radius: 12px; top:0px;">
+                                        <div class="card-body p-4">
+                                            <h5 style="font-weight: 600; color: #2a3547; margin-bottom: 20px;"><i
+                                                    class="material-icons text-muted"
+                                                    style="vertical-align: middle; margin-right: 8px;">code</i>
+                                                Architecture</h5>
+                                            <ul class="pl-3 mb-0"
+                                                style="color: #5a6a85; line-height: 1.8; font-size: 14px;">
+                                                <li><strong>Demo Mode:</strong> All features work without an API key
+                                                    using mock responses.</li>
+                                                <li><strong>AI Service:</strong> Powered by
+                                                    <code>AiService.postPrompt()</code> from
+                                                    <code>@core/service/ai.service</code>.
+                                                </li>
+                                                <li><strong>Configuration:</strong> Keys are stored in
+                                                    <code>localStorage</code> under <code>cliniva_ai_config</code>.
+                                                </li>
+                                                <li><strong>Components:</strong> All AI-enabled components use
+                                                    <code>ChangeDetectionStrategy.OnPush</code> for high performance.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100 shadow-none"
+                                        style="background: #fffafa; border: 1px solid #ffcdce; border-radius: 12px; top:0px;">
+                                        <div class="card-body p-4">
+                                            <h5 style="font-weight: 600; color: #fa896b; margin-bottom: 20px;"><i
+                                                    class="material-icons"
+                                                    style="vertical-align: middle; margin-right: 8px;">security</i>
+                                                Security & Compliance</h5>
+                                            <ul class="pl-3 mb-0"
+                                                style="color: #5a6a85; line-height: 1.8; font-size: 14px;">
+                                                <li><strong>API Key Proxy Pattern:</strong> Do not use
+                                                    <code>localStorage</code> for API keys in production. Implement a
+                                                    backend proxy.
+                                                </li>
+                                                <li><strong>HIPAA Compliance:</strong> Anonymize patient PII (Names,
+                                                    IDs) before sending data to models.</li>
+                                                <li><strong>Transition:</strong> Simply update the <code>baseUrl</code>
+                                                    in your <code>AiService</code> to point to your secure API gateway.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/prism.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/admin.js"></script>
+</body>
+
+</html>

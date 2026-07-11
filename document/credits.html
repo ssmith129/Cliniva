@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Cliniva - Angular 21+ Hospital Admin Dashboard Template </title>
+    <!-- Favicon-->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Plugins Core Css -->
+    <link href="assets/css/app.min.css" rel="stylesheet">
+
+    <!-- Custom Css -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/modern-sidebar.css" rel="stylesheet" />
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+
+    <link href="assets/css/prism.min.css" rel="stylesheet" />
+
+    <!-- You can choose a theme from css/styles instead of get all themes -->
+    <link href="assets/css/styles/theme-white.css" rel="stylesheet" />
+</head>
+
+<body class="theme-white logo-black submenu-closed">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30">
+                <img class="loading-img-spin" src="assets/images/loading.png" width="20" height="20" alt="admin">
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Search Bar -->
+    <!-- #END# Search Bar -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" /> <span
+                        class="logo-name">Cliniva</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown user_profile">
+                        <p class="col-blue m-r-20">V 22.0.0</p>
+                    </li>
+                    <li class="dropdown user_profile m-r-20">
+                        <form
+                            action="https://themeforest.net/item/cliniva-angular-8-hospital-admin-dashboard-template/24571066/comments"
+                            method="get" target="_blank">
+                            <button type="submit" class="btn bg-blue waves-effect">Support</button>
+                        </form>
+                    </li>
+                    <li class="dropdown user_profile m-r-20">
+                        <form
+                            action="https://themeforest.net/item/cliniva-angular-8-hospital-admin-dashboard-template/24571066"
+                            method="get" target="_blank">
+                            <button type="submit" class="btn bg-orange waves-effect">Buy
+                                Now</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <section>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li>
+                        <a href="index.html">
+                            <i class="material-icons">home</i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ai-features.html">
+                            <i class="material-icons">smart_toy</i>
+                            <span>AI Features</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="glassmorphism.html">
+                            <i class="material-icons">blur_on</i>
+                            <span>Glassmorphism</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="intro.html">
+                            <i class="material-icons">info</i>
+                            <span>Introductions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="install.html">
+                            <i class="material-icons">build</i>
+                            <span>Installation</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="folder-structure.html">
+                            <i class="material-icons">folder</i>
+                            <span>Folder Structure</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="config.html">
+                            <i class="material-icons">perm_data_setting</i>
+                            <span>Configuration</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="multi-lang.html">
+                            <i class="material-icons">translate</i>
+                            <span>Multi Language</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="routing.html">
+                            <i class="material-icons">directions</i>
+                            <span>Routing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="new-page.html">
+                            <i class="material-icons">select_all</i>
+                            <span>New Page </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="material-icons">people</i>
+                            <span>Role</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="role-info.html">About Role</a>
+                            </li>
+                            <li>
+                                <a href="role-config.html">Role Configurations</a>
+                            </li>
+                            <li>
+                                <a href="new-role.html">Add New Role</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="sidebar-menu.html">
+                            <i class="material-icons">chrome_reader_mode</i>
+                            <span>Sidebar Menu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="hospital-modules.html">
+                            <i class="material-icons">local_hospital</i>
+                            <span>Hospital Modules</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="material-icons">web</i>
+                            <span>Form</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="form-elements.html">Form Elements</a>
+                            </li>
+                            <li>
+                                <a href="form-validation.html">Form Validation</a>
+                            </li>
+                            <li>
+                                <a href="form-wizard.html">Form Wizard</a>
+                            </li>
+                            <li>
+                                <a href="editors.html">Editors</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="material-icons">border_all</i>
+                            <span>Tables</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="bootstrap-table.html">Bootstrap Table</a>
+                            </li>
+                            <li>
+                                <a href="material-table.html">Material Table</a>
+                            </li>
+                            <li>
+                                <a href="ngx-datatable.html">ngx-datatable</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="material-icons">equalizer</i>
+                            <span>Charts</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="echart.html">Echart Chart</a>
+                            </li>
+
+                            <li>
+                                <a href="apex.html">Apex Chart</a>
+                            </li>
+                            <li>
+                                <a href="chartjs.html">Chart js</a>
+                            </li>
+                            <li>
+                                <a href="gauge-chart.html">Gauge Chart</a>
+                            </li>
+                            <li>
+                                <a href="ngx-chart.html">ngx-chart</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="calendar.html">
+                            <i class="material-icons">event</i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pwa-deployment.html">
+                            <i class="material-icons">cloud_upload</i>
+                            <span>PWA & Deployment</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="utilities.html">
+                            <i class="material-icons">format_paint</i>
+                            <span>Utilities</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="credits.html">
+                            <i class="material-icons">thumb_up</i>
+                            <span>Credits</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="changelog.html">
+                            <i class="material-icons">watch_later</i>
+                            <span>Changelog</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="support.html">
+                            <i class="material-icons">local_phone</i>
+                            <span>Support</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- #Menu -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row clearfix" id="line13">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="card border-0 shadow-sm" style="border-radius: 16px;">
+                        <div class="header" style="border-bottom: 1px solid #f0f0f0; padding: 20px 25px;">
+                            <h2 style="font-weight: 600; color: #2a3547;"><i class="material-icons"
+                                    style="font-size: 22px; vertical-align: middle; margin-right: 10px; color: #5d87ff;">thumb_up</i>
+                                <strong>Credits</strong>
+                            </h2>
+                        </div>
+                        <div class="body" style="padding: 25px;">
+                            <div class="card-body p-0">
+                                <p class="text-muted mb-4" style="line-height: 1.6;">Below is the list of all plugins
+                                    and external resources used to power this template.
+                                </p>
+                                <div class="table-responsive">
+                                    <table class="table table-hover m-0">
+                                        <thead class="bg-light">
+                                            <tr>
+                                                <th
+                                                    style="width: 30%; border-top: none; color: #2a3547; font-weight: 600;">
+                                                    <i class="material-icons"
+                                                        style="font-size: 18px; vertical-align: middle; margin-right: 8px; color: #5d87ff;">extension</i>
+                                                    Plugins
+                                                </th>
+                                                <th style="border-top: none; color: #2a3547; font-weight: 600;"><i
+                                                        class="material-icons"
+                                                        style="font-size: 18px; vertical-align: middle; margin-right: 8px; color: #5d87ff;">link</i>
+                                                    Source Link</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-muted">
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">Angular</span>
+                                                </td>
+                                                <td><a href="https://angular.io/" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://angular.io/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">Angular
+                                                        Material Design</span></td>
+                                                <td><a href="https://material.angular.io/" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://material.angular.io/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">Bootstrap</span></td>
+                                                <td><a href="https://getbootstrap.com/" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://getbootstrap.com/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">Image
+                                                        Gallery</span></td>
+                                                <td><a href="https://github.com/sanjayV/ng-image-fullscreen-viewer"
+                                                        target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://github.com/sanjayV/ng-image-fullscreen-viewer</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ng2-charts</span></td>
+                                                <td><a href="https://valor-software.com/ng2-charts/" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://valor-software.com/ng2-charts/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">Apex
+                                                        Chart</span></td>
+                                                <td><a href="https://apexcharts.com/docs/angular-charts/"
+                                                        target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://apexcharts.com/docs/angular-charts/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">Material
+                                                        Icons</span></td>
+                                                <td><a href="https://material.io/tools/icons/?style=baseline/"
+                                                        target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://material.io/tools/icons/?style=baseline/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ngx-editor</span></td>
+                                                <td><a href="https://www.npmjs.com/package/ngx-editor" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/ngx-editor</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">Full
+                                                        Calendar</span></td>
+                                                <td><a href="https://fullcalendar.io/" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://fullcalendar.io/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ng2-dragula</span></td>
+                                                <td><a href="https://www.npmjs.com/package/ng2-dragula/" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/ng2-dragula/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ngx-datatable</span></td>
+                                                <td><a href="https://github.com/swimlane/ngx-datatable/" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://github.com/swimlane/ngx-datatable/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ngx-charts</span></td>
+                                                <td><a href="https://github.com/swimlane/ngx-charts/" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://github.com/swimlane/ngx-charts/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ngx-gauge</span></td>
+                                                <td><a href="https://www.npmjs.com/package/ngx-gauge" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/ngx-gauge</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ngx-mask</span></td>
+                                                <td><a href="https://www.npmjs.com/package/ngx-mask" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/ngx-mask</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">Sweet
+                                                        Alert</span></td>
+                                                <td><a href="https://sweetalert2.github.io/" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://sweetalert2.github.io/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">File
+                                                        Upload (ngx-dropzone-wrapper)</span></td>
+                                                <td><a href="https://www.npmjs.com/package/ngx-dropzone-wrapper"
+                                                        target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/ngx-dropzone-wrapper</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">Angular Date
+                                                        Time Picker</span></td>
+                                                <td><a href="https://github.com/DanielYKPan/date-time-picker"
+                                                        target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://github.com/DanielYKPan/date-time-picker</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">ECharts</span>
+                                                </td>
+                                                <td><a href="https://echarts.apache.org/" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://echarts.apache.org/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ngx-echarts</span></td>
+                                                <td><a href="https://www.npmjs.com/package/ngx-echarts" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/ngx-echarts</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ngx-gauge</span></td>
+                                                <td><a href="https://www.npmjs.com/package/ngx-gauge" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/ngx-gauge</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ngx-translate</span></td>
+                                                <td><a href="https://github.com/ngx-translate/core" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://github.com/ngx-translate/core</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ngx-permissions</span></td>
+                                                <td><a href="https://www.npmjs.com/package/ngx-permissions"
+                                                        target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/ngx-permissions</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ngx-editor</span></td>
+                                                <td><a href="https://www.npmjs.com/package/ngx-editor" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/ngx-editor</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ngx-scrollbar</span></td>
+                                                <td><a href="https://www.npmjs.com/package/ngx-scrollbar"
+                                                        target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/ngx-scrollbar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ngx-dropzone-wrapper</span></td>
+                                                <td><a href="https://www.npmjs.com/package/ngx-dropzone-wrapper"
+                                                        target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/ngx-dropzone-wrapper</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">ngx-loading-bar</span></td>
+                                                <td><a href="https://www.npmjs.com/package/@ngx-loading-bar/core"
+                                                        target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/@ngx-loading-bar/core</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">Feather Icons
+                                                        (angular-feather)</span></td>
+                                                <td><a href="https://www.npmjs.com/package/angular-feather"
+                                                        target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/angular-feather</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">ExcelJS</span>
+                                                </td>
+                                                <td><a href="https://www.npmjs.com/package/exceljs" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/exceljs</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">file-saver</span></td>
+                                                <td><a href="https://www.npmjs.com/package/file-saver" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/file-saver</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600"
+                                                        style="color: #2a3547;">date-fns</span></td>
+                                                <td><a href="https://date-fns.org/" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://date-fns.org/</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">SubSink</span>
+                                                </td>
+                                                <td><a href="https://www.npmjs.com/package/subsink" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://www.npmjs.com/package/subsink</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">Angular
+                                                        Service Worker (PWA)</span></td>
+                                                <td><a href="https://angular.io/guide/service-worker-getstarted"
+                                                        target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://angular.io/guide/service-worker-getstarted</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="font-weight-600" style="color: #2a3547;">Sass
+                                                        (SCSS)</span></td>
+                                                <td><a href="https://sass-lang.com/" target="_blank"
+                                                        style="color: #5d87ff; font-weight: 500;">https://sass-lang.com/</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="assets/js/prism.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <!-- Custom Js -->
+    <script src="assets/js/admin.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+</body>
+
+</html>
