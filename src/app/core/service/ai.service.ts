@@ -9,6 +9,17 @@ export interface AiConfig {
   model: string;
 }
 
+/**
+ * Default AI configuration applied out of the box. Google Gemini is
+ * pre-selected and pre-configured so AI features are enabled on first access
+ * without the user having to re-enter their provider, API key, and model.
+ */
+export const DEFAULT_AI_CONFIG: AiConfig = {
+  provider: 'gemini',
+  apiKey: 'AQ.Ab8RN6Im1ROWPFOZMqFJ57N7maM2wVUsL2ak9HbnOWb2G_6NDQ',
+  model: 'gemini-flash-latest',
+};
+
 interface OpenAIResponse {
   choices: {
     message: {
@@ -33,7 +44,20 @@ interface GeminiResponse {
 export class AiService {
   private readonly STORAGE_KEY = 'cliniva_ai_config';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.seedDefaultConfig();
+  }
+
+  /**
+   * Ensures a default AI configuration is persisted so the app ships with
+   * Google Gemini enabled without requiring the user to save settings first.
+   * A previously saved configuration is left untouched.
+   */
+  private seedDefaultConfig(): void {
+    if (!localStorage.getItem(this.STORAGE_KEY)) {
+      this.saveConfig(DEFAULT_AI_CONFIG);
+    }
+  }
 
   /**
    * Saves the AI configuration to local storage
@@ -47,9 +71,7 @@ export class AiService {
    */
   getConfig(): AiConfig {
     const config = localStorage.getItem(this.STORAGE_KEY);
-    return config
-      ? JSON.parse(config)
-      : { provider: 'none', apiKey: '', model: '' };
+    return config ? JSON.parse(config) : { ...DEFAULT_AI_CONFIG };
   }
 
   /**

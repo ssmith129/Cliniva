@@ -10,7 +10,8 @@ import {
   isDevMode,
 } from '@angular/core';
 import { APP_ROUTE } from './app.routes';
-import { provideRouter } from '@angular/router';
+import { provideRouter, TitleStrategy } from '@angular/router';
+import { AppTitleStrategy } from '@core/service/title-strategy.service';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { errorInterceptorFn } from '@core/interceptor/error.interceptor';
@@ -70,6 +71,7 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideHttpClient(withInterceptors([errorInterceptorFn])),
     provideRouter(APP_ROUTE),
+    { provide: TitleStrategy, useClass: AppTitleStrategy },
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     DirectionService,
     LanguageService,
