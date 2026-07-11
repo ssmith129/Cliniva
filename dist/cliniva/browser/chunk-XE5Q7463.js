@@ -1,1 +1,0 @@
-import"./chunk-IM5V7DCU.js";var o=[{path:"call-list",loadComponent:()=>import("./chunk-TMORBSPU.js").then(t=>t.AmbulanceCallListComponent)},{path:"list",loadComponent:()=>import("./chunk-VPQAFTS2.js").then(t=>t.AmbulanceListComponent)},{path:"**",loadComponent:()=>import("./chunk-7FOHRX4H.js").then(t=>t.Page404Component)}];export{o as AMBULANCE_ROUTE};

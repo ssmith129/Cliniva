@@ -1,1 +1,0 @@
-import"./chunk-IM5V7DCU.js";var n=[{path:"diet-plans",loadComponent:()=>import("./chunk-V2VNJMP4.js").then(t=>t.DietPlansComponent)},{path:"nutritional-assessment",loadComponent:()=>import("./chunk-HURW4DJ7.js").then(t=>t.NutritionalAssessmentComponent)}];export{n as DIET_NUTRITION_ROUTE};

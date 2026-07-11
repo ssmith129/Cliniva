@@ -1,1 +1,0 @@
-import"./chunk-IM5V7DCU.js";var t=[{path:"",redirectTo:"timeline1",pathMatch:"full"},{path:"timeline1",loadComponent:()=>import("./chunk-BUOTNIMZ.js").then(e=>e.Timeline1Component)},{path:"timeline2",loadComponent:()=>import("./chunk-DQFEL5U7.js").then(e=>e.Timeline2Component)}];export{t as TIMELINE_ROUTE};

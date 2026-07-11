@@ -1,1 +1,0 @@
-import"./chunk-IM5V7DCU.js";var n=[{path:"workflow",loadComponent:()=>import("./chunk-5NV32FMM.js").then(o=>o.DischargeWorkflowComponent)},{path:"summary-creation",loadComponent:()=>import("./chunk-54YYRZCR.js").then(o=>o.SummaryCreationComponent)},{path:"clearance",loadComponent:()=>import("./chunk-N5QMDMAP.js").then(o=>o.ClearanceComponent)}];export{n as DISCHARGE_ROUTE};

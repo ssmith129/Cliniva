@@ -1,1 +1,0 @@
-import"./chunk-IM5V7DCU.js";var n=[{path:"department-list",loadComponent:()=>import("./chunk-4MJM2UW6.js").then(t=>t.DepartmentListComponent)},{path:"add-department",loadComponent:()=>import("./chunk-T2TYNGKC.js").then(t=>t.AddDepartmentComponent)},{path:"**",loadComponent:()=>import("./chunk-7FOHRX4H.js").then(t=>t.Page404Component)}];export{n as DEPARTMENT_ROUTE};

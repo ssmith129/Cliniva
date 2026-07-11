@@ -1,1 +1,0 @@
-import"./chunk-IM5V7DCU.js";var n=[{path:"second1",loadComponent:()=>import("./chunk-EG6UOAZ3.js").then(o=>o.Second1Component)},{path:"second2",loadComponent:()=>import("./chunk-KQLQC7Q6.js").then(o=>o.Second2Component)}];export{n as SECONDLEVEL_ROUTE};
