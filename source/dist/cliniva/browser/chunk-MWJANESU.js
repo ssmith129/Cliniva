@@ -1,0 +1,1 @@
+import"./chunk-IM5V7DCU.js";var o=[{path:"",redirectTo:"material",pathMatch:"full"},{path:"material",loadComponent:()=>import("./chunk-5EQ56GXG.js").then(t=>t.MaterialComponent)},{path:"font-awesome",loadComponent:()=>import("./chunk-OGA2SLIR.js").then(t=>t.FontAwesomeComponent)}];export{o as ICONS_ROUTE};

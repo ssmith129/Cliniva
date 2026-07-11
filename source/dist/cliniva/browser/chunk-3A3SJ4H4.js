@@ -1,0 +1,1 @@
+import"./chunk-IM5V7DCU.js";var o=[{path:"birth",loadComponent:()=>import("./chunk-Q6YYVQOL.js").then(t=>t.BirthComponent)},{path:"death",loadComponent:()=>import("./chunk-FCQ53VHG.js").then(t=>t.DeathComponent)},{path:"**",loadComponent:()=>import("./chunk-7FOHRX4H.js").then(t=>t.Page404Component)}];export{o as RECORDS_ROUTE};

@@ -1,0 +1,282 @@
+/* Modern Navbar Styling */
+.navbar {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05) !important;
+    border-bottom: 1px solid #f1f1f1;
+    height: 70px;
+    padding: 0 15px;
+    z-index: 1000;
+}
+
+.navbar .navbar-header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    width: 280px !important; /* Set fixed width to match sidebar */
+    padding-left: 15px;
+    float: left;
+}
+
+.navbar-brand {
+    display: flex !important;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: auto !important; /* Reset any percentage widths */
+    float: left !important;
+}
+
+.navbar-brand img {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.navbar .logo-name {
+    color: #1e293b !important;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover .logo-name {
+    color: #5d87ff !important;
+}
+
+.navbar-collapse {
+    background-color: transparent !important;
+}
+
+.navbar .nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav > li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: transparent !important;
+}
+
+.navbar .nav > li > p.col-blue {
+    background: #f1f5ff;
+    color: #5d87ff !important;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 20px 0 0 !important;
+}
+
+/* Button Styling in Header */
+.navbar .btn {
+    border-radius: 8px !important;
+    padding: 8px 20px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    text-transform: none !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.navbar .bg-blue {
+    background-color: #5d87ff !important;
+}
+
+.navbar .bg-blue:hover {
+    background-color: #4e73df !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(93, 135, 255, 0.25) !important;
+}
+
+.navbar .bg-orange {
+    background-color: #ff9f43 !important;
+}
+
+.navbar .bg-orange:hover {
+    background-color: #ff8c1a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 159, 67, 0.25) !important;
+}
+
+/* Mobile Toggle Button */
+.navbar .bars {
+    color: #64748b !important;
+    margin: 15px 10px 0 0 !important;
+    padding: 10px !important;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: block !important;
+}
+
+.navbar .bars:hover {
+    background-color: #f1f5ff !important;
+    color: #5d87ff !important;
+}
+
+/* Navbar Collapse adjustments */
+@media (max-width: 767px) {
+    .navbar .navbar-header {
+        width: 100% !important;
+        justify-content: space-between;
+        padding-right: 15px;
+    }
+
+    .navbar-collapse {
+        background-color: #ffffff !important;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        border-top: 1px solid #f1f1f1;
+    }
+    
+    .navbar .nav {
+        height: auto;
+        padding: 10px 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar .nav > li {
+        width: 100%;
+        padding: 5px 20px;
+    }
+    
+    .navbar .nav > li > p.col-blue {
+        margin: 10px 0 !important;
+    }
+}
+
+/* Sidebar Styling (existing) */
+.sidebar {
+    background: #ffffff !important;
+    border-right: 1px solid #f1f1f1;
+    box-shadow: none !important;
+    transition: all 0.3s ease;
+}
+
+.sidebar .menu .list {
+    padding: 10px 0;
+}
+
+.sidebar .menu .list a {
+    padding: 10px 20px !important;
+    margin: 4px 15px;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #4b5563 !important;
+    display: flex !important;
+    align-items: center;
+    width: auto !important;
+}
+
+.sidebar .menu .list a i.material-icons {
+    margin-top: 0 !important;
+    font-size: 20px !important;
+    margin-right: 12px;
+    color: #64748b;
+    transition: color 0.3s ease;
+}
+
+.sidebar .menu .list a span {
+    margin: 0 !important;
+    font-weight: 500;
+    font-size: 14px;
+    color: inherit !important;
+}
+
+/* Hover State */
+.sidebar .menu .list a:hover {
+    background-color: #f8fafc !important;
+    color: #5d87ff !important;
+    transform: translateX(5px);
+}
+
+.sidebar .menu .list a:hover i.material-icons {
+    color: #5d87ff !important;
+}
+
+/* Active State */
+.sidebar .menu .list li.active > a {
+    background-color: #f1f5ff !important;
+    color: #5d87ff !important;
+    position: relative;
+}
+
+.sidebar .menu .list a:hover i {
+    color: #5d87ff !important;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.sidebar .menu .list li.active > a i {
+    color: #5d87ff !important;
+}
+
+/* Custom Scrollbar for Sidebar */
+.sidebar .menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar .menu::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+
+.sidebar .menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar .menu .list li.active > a i.material-icons {
+    color: #5d87ff !important;
+}
+
+.sidebar .menu .list li.active > a::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background-color: #5d87ff;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Submenu Styling */
+.sidebar .menu .list .ml-menu {
+    background-color: transparent !important;
+    padding-left: 15px !important;
+}
+
+.sidebar .menu .list .ml-menu li a {
+    padding-left: 35px !important;
+    margin: 2px 15px 2px 5px;
+}
+
+/* Animation for menu toggling */
+.sidebar .menu .list .menu-toggle::after, 
+.sidebar .menu .list .menu-toggle::before {
+    right: 20px !important;
+    color: #94a3b8 !important;
+}
+
+.sidebar .menu .list li.active > .menu-toggle::after,
+.sidebar .menu .list li.active > .menu-toggle::before {
+    color: #5d87ff !important;
+}
+
+/* Scrollbar Styling */
+.sidebar .menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar .menu::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+
+.sidebar .menu::-webkit-scrollbar-track {
+    background: transparent;
+}
