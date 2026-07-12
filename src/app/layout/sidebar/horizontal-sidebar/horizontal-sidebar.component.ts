@@ -37,7 +37,12 @@ export class HorizontalSidebarComponent extends UnsubscribeOnDestroyAdapter impl
     this.subs.sink = this.sidebarService
       .getRouteInfo()
       .subscribe((routes: RouteInfo[]) => {
-        this.sidebarItems = routes.filter(item => !item.groupTitle);
+        // Exclude group titles and password-locked menus. Locked menus are only
+        // accessible from the vertical sidebar, which gates them behind a password;
+        // the horizontal menu opens submenus on hover, which would bypass that gate.
+        this.sidebarItems = routes.filter(
+          (item) => !item.groupTitle && !item.locked
+        );
         this.cdr.markForCheck();
         // Give time for layout to render then check arrows
         setTimeout(() => this.checkArrows(), 150);

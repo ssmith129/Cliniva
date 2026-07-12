@@ -1,0 +1,47 @@
+<h2 mat-dialog-title class="menu-lock-title">
+  <mat-icon class="menu-lock-title-icon">lock</mat-icon>
+  {{ 'Locked Menu' | translate }}
+</h2>
+
+<mat-dialog-content>
+  <p class="menu-lock-subtitle">
+    {{ 'Enter the password to access' | translate }}
+    <strong>{{ data.title | translate }}</strong>.
+  </p>
+
+  <form [formGroup]="lockForm" (ngSubmit)="onSubmit()" class="menu-lock-form">
+    <mat-form-field appearance="outline" class="menu-lock-field">
+      <mat-label>{{ 'Password' | translate }}</mat-label>
+      <input
+        matInput
+        formControlName="password"
+        [type]="hide ? 'password' : 'text'"
+        autocomplete="off"
+        (input)="error = false"
+      />
+      <button
+        type="button"
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Toggle password visibility'"
+        [attr.aria-pressed]="!hide"
+      >
+        <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    @if (error) {
+    <p class="menu-lock-error">{{ 'Incorrect password. Please try again.' | translate }}</p>
+    }
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button type="button" (click)="onCancel()">
+    {{ 'Cancel' | translate }}
+  </button>
+  <button mat-raised-button color="primary" type="button" (click)="onSubmit()">
+    {{ 'Unlock' | translate }}
+  </button>
+</mat-dialog-actions>

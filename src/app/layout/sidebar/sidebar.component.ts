@@ -13,6 +13,8 @@ import { NgScrollbar } from 'ngx-scrollbar';
 import { UnsubscribeOnDestroyAdapter } from '@shared';
 import { SidebarService } from './sidebar.service';
 import { NgxPermissionsModule } from 'ngx-permissions';
+import { MatDialog } from '@angular/material/dialog';
+import { MenuLockDialogComponent } from './menu-lock-dialog/menu-lock-dialog.component';
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-sidebar',
@@ -38,6 +40,12 @@ export class SidebarComponent
   private router = inject(Router);
   private sidebarService = inject(SidebarService);
   private cdr = inject(ChangeDetectorRef);
+  private dialog = inject(MatDialog);
+
+  /** Password required to open menus flagged with `locked: true`. */
+  private readonly lockedMenuPassword = 'M$rd1234';
+  /** Titles of locked menus that have been unlocked for this session. */
+  private unlockedMenus = new Set<string>();
 
   public sidebarItems!: RouteInfo[];
   public innerHeight?: number;
@@ -84,6 +92,34 @@ export class SidebarComponent
         this.renderer.addClass(parentElement, 'active');
       }
     }
+  }
+
+  /**
+   * Handles clicks on top-level menu items. Locked menus require the correct
+   * password (entered via a dialog) before their dropdown can be opened. Once
+   * unlocked, the menu behaves like any other collapsible menu for the session.
+   */
+  onTopMenuClick(event: Event, item: RouteInfo) {
+    if (item.locked && !this.unlockedMenus.has(item.title)) {
+      event.preventDefault();
+      event.stopPropagation();
+      // Capture the <li> now; the dialog result arrives asynchronously.
+      const parentElement = (event.target as HTMLElement).closest('li');
+      this.dialog
+        .open(MenuLockDialogComponent, {
+          width: '380px',
+          data: { title: item.title, password: this.lockedMenuPassword },
+        })
+        .afterClosed()
+        .subscribe((unlocked) => {
+          if (unlocked && parentElement) {
+            this.unlockedMenus.add(item.title);
+            this.renderer.addClass(parentElement, 'active');
+          }
+        });
+      return;
+    }
+    this.callToggleMenu(event, item.submenu.length);
   }
   ngOnInit() {
     if (this.authService.currentUser()) {
