@@ -23,6 +23,9 @@ export class StartupService {
   // }
 
   load() {
+    // Provision a default session up-front so the app can be viewed without a
+    // manual sign-in; permissions/roles are then wired from the active user.
+    this.authService.ensureSession();
     return this.authService
       .change()
       .pipe(

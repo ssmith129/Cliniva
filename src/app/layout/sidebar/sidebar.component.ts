@@ -188,10 +188,11 @@ export class SidebarComponent
     }
   }
   logout() {
-    this.subs.sink = this.authService.logout().subscribe((res) => {
-      if (!res.success) {
-        this.router.navigate(['/authentication/signin']);
-      }
+    this.subs.sink = this.authService.logout().subscribe(() => {
+      // Login has been removed; restore the default session and return to the
+      // landing page instead of showing a sign-in screen.
+      this.authService.ensureSession();
+      this.router.navigate(['/admin/dashboard/main']);
     });
   }
 }
