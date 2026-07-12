@@ -64,19 +64,16 @@ export class AiService {
   /**
    * Retrieves the AI configuration from local storage.
    *
-   * Falls back to the app-wide {@link DEFAULT_AI_CONFIG} whenever nothing has
-   * been stored yet or the stored value is not a complete, deliberately-chosen
-   * selection. This guarantees every visitor already has the default Gemini
-   * inputs entered, while still preserving a user's own configured provider.
+   * Any missing field falls back to the app-wide {@link DEFAULT_AI_CONFIG}, and
+   * when nothing (or corrupted data) is stored the full default is returned, so
+   * every visitor always has the pinned Gemini inputs entered.
    */
   getConfig(): AiConfig {
     const stored = localStorage.getItem(this.STORAGE_KEY);
     if (stored) {
       try {
         const parsed = JSON.parse(stored) as Partial<AiConfig>;
-        if (parsed && parsed.provider && parsed.provider !== 'none' && parsed.apiKey) {
-          return { ...DEFAULT_AI_CONFIG, ...parsed };
-        }
+        return { ...DEFAULT_AI_CONFIG, ...parsed };
       } catch {
         // Corrupted value — fall through to defaults.
       }
@@ -85,22 +82,16 @@ export class AiService {
   }
 
   /**
-   * Seeds local storage with the default AI configuration when the user has no
-   * complete configuration yet, so the selections are persisted ("entered") and
-   * preserved across deployments. Called once at application startup.
+   * Persists the pinned default AI configuration (Google Gemini, fixed API key,
+   * gemini-flash-latest) so the inputs are always saved without anyone having to
+   * re-enter them. Runs at application startup and writes the values whenever
+   * storage is empty or does not already match the pinned configuration —
+   * guaranteeing the same configuration app-wide, across browsers and
+   * deployments.
    */
   ensureDefaultConfig(): void {
     const stored = localStorage.getItem(this.STORAGE_KEY);
-    if (!stored) {
-      this.saveConfig({ ...DEFAULT_AI_CONFIG });
-      return;
-    }
-    try {
-      const parsed = JSON.parse(stored) as Partial<AiConfig>;
-      if (!parsed || !parsed.provider || parsed.provider === 'none' || !parsed.apiKey) {
-        this.saveConfig({ ...DEFAULT_AI_CONFIG });
-      }
-    } catch {
+    if (stored !== JSON.stringify(DEFAULT_AI_CONFIG)) {
       this.saveConfig({ ...DEFAULT_AI_CONFIG });
     }
   }
