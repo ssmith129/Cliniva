@@ -1,0 +1,30 @@
+.menu-lock-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .menu-lock-title-icon {
+    color: var(--primary, #5a5faf);
+  }
+}
+
+.menu-lock-subtitle {
+  margin: 0 0 16px;
+  font-size: 14px;
+}
+
+.menu-lock-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-lock-field {
+  width: 100%;
+  min-width: 280px;
+}
+
+.menu-lock-error {
+  margin: 4px 0 0;
+  color: #f44336;
+  font-size: 13px;
+}

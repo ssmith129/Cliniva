@@ -65,6 +65,23 @@ export class AuthService {
     return this.tokenService.valid();
   }
 
+  /**
+   * Ensures an authenticated session exists so the application can be viewed
+   * without a manual sign-in. When no valid user is stored yet, a default
+   * administrator session is provisioned automatically. An existing session
+   * (e.g. one restored from storage) is left untouched.
+   */
+  ensureSession(): void {
+    const existing = this.store.get<User>('currentUser');
+    if (existing && Array.isArray(existing.roles) && existing.roles.length > 0) {
+      return;
+    }
+    // Provision the default administrator session (mock credentials). This runs
+    // synchronously for the in-memory login service, so the session is in place
+    // before route guards evaluate.
+    this.login('clinivaAdmin', 'admin@123').subscribe();
+  }
+
   logout() {
     // remove user from local storage to log user out
     this.store.clear();

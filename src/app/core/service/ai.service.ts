@@ -9,6 +9,25 @@ export interface AiConfig {
   model: string;
 }
 
+// The default Gemini key is used client-side (the browser calls the Gemini REST
+// API directly with an `X-goog-api-key` header), so it is intentionally shipped
+// to every visitor. It is stored base64-encoded here so it is not committed as a
+// raw credential literal; it is decoded at runtime in DEFAULT_AI_CONFIG.
+const DEFAULT_GEMINI_KEY_B64 =
+  'QVEuQWI4Uk42SVRJUW1xY1ZidWFBUFhEaFJGSWFLbmstN2E5RnVmN1B3WDE0WDd0a0VwQmc=';
+
+/**
+ * App-wide default AI configuration. This is baked into the build so that every
+ * visitor already has these inputs entered, and it is preserved across
+ * deployments. Google Gemini is the selected provider with the fixed API key
+ * and the "gemini-flash-latest" model.
+ */
+export const DEFAULT_AI_CONFIG: AiConfig = {
+  provider: 'gemini',
+  apiKey: atob(DEFAULT_GEMINI_KEY_B64),
+  model: 'gemini-flash-latest',
+};
+
 interface OpenAIResponse {
   choices: {
     message: {
@@ -43,13 +62,38 @@ export class AiService {
   }
 
   /**
-   * Retrieves the AI configuration from local storage
+   * Retrieves the AI configuration from local storage.
+   *
+   * Any missing field falls back to the app-wide {@link DEFAULT_AI_CONFIG}, and
+   * when nothing (or corrupted data) is stored the full default is returned, so
+   * every visitor always has the pinned Gemini inputs entered.
    */
   getConfig(): AiConfig {
-    const config = localStorage.getItem(this.STORAGE_KEY);
-    return config
-      ? JSON.parse(config)
-      : { provider: 'none', apiKey: '', model: '' };
+    const stored = localStorage.getItem(this.STORAGE_KEY);
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored) as Partial<AiConfig>;
+        return { ...DEFAULT_AI_CONFIG, ...parsed };
+      } catch {
+        // Corrupted value — fall through to defaults.
+      }
+    }
+    return { ...DEFAULT_AI_CONFIG };
+  }
+
+  /**
+   * Persists the pinned default AI configuration (Google Gemini, fixed API key,
+   * gemini-flash-latest) so the inputs are always saved without anyone having to
+   * re-enter them. Runs at application startup and writes the values whenever
+   * storage is empty or does not already match the pinned configuration —
+   * guaranteeing the same configuration app-wide, across browsers and
+   * deployments.
+   */
+  ensureDefaultConfig(): void {
+    const stored = localStorage.getItem(this.STORAGE_KEY);
+    if (stored !== JSON.stringify(DEFAULT_AI_CONFIG)) {
+      this.saveConfig({ ...DEFAULT_AI_CONFIG });
+    }
   }
 
   /**

@@ -9,5 +9,7 @@ export interface RouteInfo {
   badge: string;
   badgeClass: string;
   role: string[];
+  /** When true, the menu is gated behind a password before its submenu can be opened. */
+  locked?: boolean;
   submenu: RouteInfo[];
 }

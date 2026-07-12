@@ -3,13 +3,15 @@ import { Route } from '@angular/router';
 export const AUTH_ROUTE: Route[] = [
   {
     path: '',
-    redirectTo: 'signin',
+    redirectTo: '/admin/dashboard/main',
     pathMatch: 'full',
   },
   {
+    // The sign-in page has been removed; the app no longer requires a manual
+    // login. Any link to the old sign-in route lands on the default page.
     path: 'signin',
-    loadComponent: () =>
-      import('./signin/signin.component').then((m) => m.SigninComponent),
+    redirectTo: '/admin/dashboard/main',
+    pathMatch: 'full',
   },
   {
     path: 'signup',
