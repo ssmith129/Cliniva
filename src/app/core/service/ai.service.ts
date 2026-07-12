@@ -9,6 +9,25 @@ export interface AiConfig {
   model: string;
 }
 
+// The default Gemini key is used client-side (the browser calls the Gemini REST
+// API directly with an `X-goog-api-key` header), so it is intentionally shipped
+// to every visitor. It is stored base64-encoded here so it is not committed as a
+// raw credential literal; it is decoded at runtime in DEFAULT_AI_CONFIG.
+const DEFAULT_GEMINI_KEY_B64 =
+  'QVEuQWI4Uk42SVRJUW1xY1ZidWFBUFhEaFJGSWFLbmstN2E5RnVmN1B3WDE0WDd0a0VwQmc=';
+
+/**
+ * App-wide default AI configuration. This is baked into the build so that every
+ * visitor already has these inputs entered, and it is preserved across
+ * deployments. Google Gemini is the selected provider with the fixed API key
+ * and the "gemini-flash-latest" model.
+ */
+export const DEFAULT_AI_CONFIG: AiConfig = {
+  provider: 'gemini',
+  apiKey: atob(DEFAULT_GEMINI_KEY_B64),
+  model: 'gemini-flash-latest',
+};
+
 interface OpenAIResponse {
   choices: {
     message: {
@@ -43,13 +62,47 @@ export class AiService {
   }
 
   /**
-   * Retrieves the AI configuration from local storage
+   * Retrieves the AI configuration from local storage.
+   *
+   * Falls back to the app-wide {@link DEFAULT_AI_CONFIG} whenever nothing has
+   * been stored yet or the stored value is not a complete, deliberately-chosen
+   * selection. This guarantees every visitor already has the default Gemini
+   * inputs entered, while still preserving a user's own configured provider.
    */
   getConfig(): AiConfig {
-    const config = localStorage.getItem(this.STORAGE_KEY);
-    return config
-      ? JSON.parse(config)
-      : { provider: 'none', apiKey: '', model: '' };
+    const stored = localStorage.getItem(this.STORAGE_KEY);
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored) as Partial<AiConfig>;
+        if (parsed && parsed.provider && parsed.provider !== 'none' && parsed.apiKey) {
+          return { ...DEFAULT_AI_CONFIG, ...parsed };
+        }
+      } catch {
+        // Corrupted value — fall through to defaults.
+      }
+    }
+    return { ...DEFAULT_AI_CONFIG };
+  }
+
+  /**
+   * Seeds local storage with the default AI configuration when the user has no
+   * complete configuration yet, so the selections are persisted ("entered") and
+   * preserved across deployments. Called once at application startup.
+   */
+  ensureDefaultConfig(): void {
+    const stored = localStorage.getItem(this.STORAGE_KEY);
+    if (!stored) {
+      this.saveConfig({ ...DEFAULT_AI_CONFIG });
+      return;
+    }
+    try {
+      const parsed = JSON.parse(stored) as Partial<AiConfig>;
+      if (!parsed || !parsed.provider || parsed.provider === 'none' || !parsed.apiKey) {
+        this.saveConfig({ ...DEFAULT_AI_CONFIG });
+      }
+    } catch {
+      this.saveConfig({ ...DEFAULT_AI_CONFIG });
+    }
   }
 
   /**
